@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Cook Book</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enterCuisine">Enter Cuisine</string>
+    <string name="enterRecipe">Enter Recipe</string>
+    <string name="enterRecipeDescription">Enter Recipe Description..</string>
+    <string name="submit">Submit</string>
+</resources>
