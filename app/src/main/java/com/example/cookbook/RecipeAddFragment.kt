@@ -16,8 +16,8 @@ class RecipeAddFragment : Fragment() {
 
     lateinit var binding: FragmentRecipeAddBinding
 
-    var database = FirebaseDatabase.getInstance()
-    var myRef = database.getReference("message")
+    var firebaseDatabase = FirebaseDatabase.getInstance()
+    var myFireBaseRef = firebaseDatabase.getReference()
 
 
     override fun onCreateView(
@@ -36,7 +36,7 @@ class RecipeAddFragment : Fragment() {
     private fun writeToFirebase(cuisine: String, recipe: String, description: String) {
 
         val recipeData = RecipeData(recipe.trim(), description.trim())
-        myRef.child(cuisine).setValue(recipeData).addOnCompleteListener {
+        myFireBaseRef.child(cuisine).setValue(recipeData).addOnCompleteListener {
 
             Toast.makeText(requireContext(), it.toString(), Toast.LENGTH_SHORT).show()
         }
