@@ -35,7 +35,8 @@ class CuisineListActivity : AppCompatActivity(), ItemClickListener {
 
         getIntentData()
         init()
-        progressBarVisiblity(View.VISIBLE)
+
+        binding.progressBar.visibility = View.VISIBLE
         scope.launch {
             readFromFireBase()
         }
@@ -63,11 +64,6 @@ class CuisineListActivity : AppCompatActivity(), ItemClickListener {
 
     }
 
-    fun progressBarVisiblity(visiblity: Int) {
-
-            binding.progressBar.visibility = visiblity
-
-    }
 
     private fun setRecycler() {
 
@@ -106,7 +102,7 @@ class CuisineListActivity : AppCompatActivity(), ItemClickListener {
             }
 
         }
-        progressBarVisiblity(View.GONE)
+        binding.progressBar.visibility = View.GONE
         myRef.addValueEventListener(helperListener)
     }
 
