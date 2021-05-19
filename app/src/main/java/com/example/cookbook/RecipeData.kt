@@ -1,6 +1,19 @@
 package com.example.cookbook
 
-data class RecipeData(
-    val recipeTitle : String,
-    val description : String
-)
+import com.google.firebase.database.IgnoreExtraProperties
+
+@IgnoreExtraProperties
+class RecipeData {
+    var title: String? = null
+    var description: String? = null
+
+    constructor() {
+        // Default constructor required for calls to DataSnapshot.getValue(User.class)
+    }
+
+    constructor(title: String?, description: String?) {
+        this.title = title
+        this.description = description
+    }
+}
+

@@ -5,4 +5,8 @@
     <string name="enterRecipe">Enter Recipe</string>
     <string name="enterRecipeDescription">Enter Recipe Description..</string>
     <string name="submit">Submit</string>
+    <string name="indian">Indian</string>
+    <string name="italian">Italian</string>
+    <string name="chinese">Chinese</string>
+    <string name="french">French</string>
 </resources>

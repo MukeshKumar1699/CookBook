@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipeAddActivity">
+
+
+    <RadioGroup
+        android:id="@+id/rg_Cusine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enterCuisine"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+
+        <RadioButton
+            android:id="@+id/rb_Indian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:backgroundTint="@color/white"
+            android:buttonTint="@color/toolbarBlue"
+            android:checked="false"
+            android:text="@string/indian"
+            android:padding="@dimen/dp_5" />
+
+        <RadioButton
+            android:id="@+id/rb_Italian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:buttonTint="@color/toolbarBlue"
+            android:checked="false"
+            android:textColorHint="@color/black"
+            android:text="@string/italian"
+            android:padding="@dimen/dp_5" />
+
+        <RadioButton
+            android:id="@+id/rb_Chinese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:textColorHint="@color/black"
+            android:buttonTint="@color/toolbarBlue"
+            android:checked="false"
+            android:text="@string/chinese"
+            android:padding="@dimen/dp_5" />
+
+        <RadioButton
+            android:id="@+id/rb_French"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:backgroundTint="@color/white"
+            android:buttonTint="@color/toolbarBlue"
+            android:checked="false"
+            android:text="@string/french"
+            android:padding="@dimen/dp_5" />
+    </RadioGroup>
+
+
+    <EditText
+        android:id="@+id/et_RecipeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:backgroundTint="@color/white"
+        android:textColorHint="@color/black"
+        android:hint="@string/enterRecipe"
+        android:padding="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rg_Cusine" />
+
+    <EditText
+        android:id="@+id/et_RecipeDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:backgroundTint="@color/white"
+        android:hint="@string/enterRecipeDescription"
+        android:textColorHint="@color/black"
+        android:padding="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_RecipeTitle" />
+
+    <Button
+        android:id="@+id/btn_Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:backgroundTint="@color/toolbarBlue"
+        android:text="@string/submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
